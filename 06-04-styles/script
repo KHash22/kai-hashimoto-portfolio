@@ -1,0 +1,27 @@
+console.log('observer script loaded');
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM ready');
+
+  // simple safety guard
+  const blocks = document.querySelectorAll('.resume-block');
+  console.log('resume-block count:', blocks.length);
+  if (!blocks.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      // debug
+      // console.log(entry.target, 'isIntersecting?', entry.isIntersecting);
+      if (entry.isIntersecting) {
+        // correct usage: no leading dot, use entry.target
+        entry.target.classList.add('fadeIn');
+        obs.unobserve(entry.target); // optional: animate once
+      }
+    });
+  }, {
+    threshold: 0.0,
+    rootMargin: '0px 0px -6% 0px' // trigger slightly earlier
+  });
+
+  blocks.forEach(el => observer.observe(el));
+});

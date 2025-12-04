@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../06-04-styles/styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    </head>
+    <body>
+        <header>
+            <nav>
+            <div class="logo nav-wrapper" style="text-decoration:none;font-weight:normal"><a href="index.html"></a></div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="mailto:kai.hashimoto1@outlook.com">CONTACT</a></li>
+            </ul>
+            </nav>
+        </header>
+        <img class="project-cover-image" style="filter: saturate(10%)" src="../06-02-images/06-02-01-pictures/363A8210.jpg">
+        <main>
+            <h1>SOLAR CAR ENERGY BALANCE</h1>
+            <div class ="main-content">
+                <div class ="project-div">
+                    <h2>MOTIVATING PROBLEM</h2>
+                    <p>     The Aurora Project was started in the wake of the 2023 World Solar Challenge with the intent of making a hollistcally better solar vehicle compared to its predecessor. The World Solar Challenge, a biennial <b>3022km race across Australia from Darwin to Adelaide</b> prompts teams to construct <b>highly efficient vehicles powered entirely by the sun</b>.
+                        After competing in 2023 with <b>Borealis</b>, The Aurora Project represented a reconstiution of how a solar car is designed by the Blue Sky team. This page serves to describe the mission objectives and design process of <b>Aurora.</b></p>
+                        <p>While <b>Borealis'</b> construction was robust, the vehicle faced several challenges, including but not limited to:</p>
+                    <ul class ="inline-list">
+                        <li><b>Vehicle Weight: </b>Fully loaded, the car came in at 315 kg: our competitors were averaging below 260 kg in our class.</li>
+                        <li><b>Poor Weight Distribution: </b>a 33.9% higher CGz compared to the intended design led to diffiuclt handling characteristics.</li>
+                        <li><b>Errors in Tolerancing: </b>A misalignment between the top deck and bottom shell left a large seam at the tail, leading to aero losses.</li>
+                    </ul>
+                    <p>For our next race at the 2025 Formula Sun Grand Prix, <b>we needed to improve the fidelity between the design and final product.</b></p>
+                    <img class="project-content-image" style="max-height: 400px;"src="../06-02-images/06-02-01-pictures/53315310347_c4dfdda7a7_o.jpg">
+                    <p class ="quote"><em>We also knew we could build a better car: <b>lighter, faster, more efficient.</b></em></p>
+                    <p>We also knew we could build a better car: lighter, faster, more efficient. But what are the vehicle parameters to prioritize, and how fast could the car drive (especially on a tight budget)? Over 2023, we obsereved many teams with 3-wheel cars, thus what are the tangible advantages/disadvantges of such design? A three wheel design pushes the trackwidth further out and widens the aeroshell, so would there be a significant aerodynamic penalty?
+                        We needed a way to compare potential solutions early on in the conceptual design process.</p>
+                </div>
+                <div class ="project-div">
+                    <h2>MY ROLE</h2>
+                    <p>As <b>Team Manager</b> I was heavily involved at every level of the team's operation, from the design, production, and operation of the vehicle, to the logistics of going to competitions and securing partnerships to fund the team's missions.</p>
+                </div>
+                <div class ="project-div">
+                    <h2>TIME TO RACE</h2>
+                    <p>This vehicle was the first to be built on the principle of <b>Race Time</b>: The theoretical minutes it would take to
+                        finish a 3022 km race using a simplified energy balance around the solar car. Compared to previous measures of performance, this objectively quantified the trade-offs in vehicle perforamnce as a funciton
+                        of 17 different parameters. In other words, the less time it took to expend all of the energy collected throughout the race (ie, <em>Energy In = Energy Out</em> )<b>, the faster the car could finish the race</b> given a fixed distance.</p>
+                    <p style="text-align: center;"><img style="margin: 0.5rem 0; max-height: 50px; width:100%;" src="..\06-02-images\06-02-01-pictures\e_out.svg"></p>
+                    <p style="text-align: center;"><img style="margin: 0.5rem 0; max-height: 50px; width:100%;" src="..\06-02-images\06-02-01-pictures\e_in.svg"></p>
+                    <p>Hence, I developed an <b>Excel</b>-based Solver to quickly estimate race time on each iteration of design. Of course, models like these can't consider vehicle dynamics. Maximising cornering velocities around a track would be critical to retain a top speed during track races like the <b>Formula Sun Grand Prix</b>, which we intended to compete at in 2025.</p>
+                    <img class="project-content-image" src="..\06-02-images\06-02-01-pictures\Screenshot 2025-11-22 at 11-37-45 Search - Blue Sky Solar Racing - Slack.png">
+                    <p>Since the greater arc of this project was to <b>refine our fabrication practices and make incremental improvements across the board</b>, we developed the following performance objectives we set <em>Borealis</em> as the benchmark:</p>
+                    <ol class="inline-list">
+                        <li><b>Finish Top 2 in the Formula Sun Grand Prix 2025</b> with a comparable race time of -Δ120 minutes.</li>
+                        <li><b>Lower total weight by at least 10%</b>, with strict adherance to the master CAD assembly.</li>
+                        <li><b>Minimum 15% increase in cornering velocity.</b></li>
+                    </ol>
+                </div>
+                <div class ="project-div">
+                    <h2>ONWARDS TO DESIGN, BUILD, TEST!</h2>
+                    <p>This websites eventual goal is to catalgoue the construction of the Aurora Project through the eyes of myself as the Team Manager (2023-2025). In the meantime, <b>check out the other related projects below</b>.</p>
+                </div>
+                <div class ="project-div">
+                    <h2>SEE ALSO</h2>
+                    <!--
+                    <a class="link-black" href="projects-systems-engineering.html">
+                        <div class="foot-row">
+                            <h3>➤ SYSTEMS ENGINEERING</h3>
+                        </div>
+                    </a>
+                    -->
+                    <a class="link-black" href="projects-aero-design.html">
+                        <div class="foot-row">
+                            <h3>➤ AERO DESIGN & SIMULATION</h3>
+                        </div>
+                    </a>
+                    <a class="link-black" href="projects-mfg-dfm.html">
+                        <div class="foot-row">
+                            <h3>➤ MANUFACTURING & DFM</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--
+            <img class="project-cover-image" src="..\06-02-images\06-02-01-pictures\363A8215.JPG">
+            <div class = "main-content">
+                <h2 style="padding-top: 1.5rem">FORMULA SUN GRAND PRIX 2025</h2>
+                <hr style="margin-top: 1.5rem;">
+                <p></p>
+                <p style="text-align: right;">KH</p>
+            </div>
+        -->
+        </main>
+
+        <script>
+            const toggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            toggle.addEventListener('click', () => {menu.classList.toggle('show');});
+        </script>
+        <footer class="container">
+           <div class="foot-element">
+                 <div class="foot-row">
+                    <div class="foot-column foot-column-50">
+                        <h3></h3>
+                        <p>Hosted on GitHub</p>
+                    </div>
+                    <div class="foot-column foot-column-25">
+                        <h3><b>CONTACT</b></h3>
+                        <p><a href="mailto:kai.hashimoto1@outlook.com">Email</a></p>
+                        <p><a href="https://www.linkedin.com/in/kai-hashimoto/" target="_blank">LinkedIn</a></p>
+                    </div>
+                    <div class="foot-column foot-column-25">
+                        <h3><b>DISCOVER</b></h3>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="projects.html">Projects</a></p>
+                        <p><a href="resume.html">Resume</a></p>
+                        <p><a href="helper.html">Useful</a></p>
+                    </div>
+                </div> 
+            </div>  
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../06-04-styles/styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    </head>
+    <body>
+        <header>
+            <nav>
+            <div class="logo nav-wrapper" style="text-decoration:none;font-weight:normal"><a href="index.html"></a></div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="mailto:kai.hashimoto1@outlook.com">CONTACT</a></li>
+            </ul>
+            </nav>
+        </header>
+        <img class="project-cover-image" src="../06-02-images/06-02-01-pictures/BorealisBackEnd.png">
+        <main>
+            <h1>AERO DESIGN / SIMULATION</h1>
+            <div class ="main-content">
+                <h2>MOTIVATING PROBLEM</h2>
+                <p>At speeds above 60 km/h, <b>aerodynamic forces can account for ~70% of drag</b> acting on a solar car. It is imperative energy losses by aerodynamics is kept to a minimum. Recall, aerodynamic energy cost is proportional to the <b>cube of the speed!</b> The goal of a good design then becomes to minimize <b>CdA</b> (drag coefficient) both in a straightline and across a range of sideward winds.</p>
+                <p style="text-align: center;"><img style="margin: 0.5rem 0; max-height: 50px; width:100%;" src="..\06-02-images\06-02-01-pictures\e_out.svg"></p>
+                <p>For our solar car, this is achieved with a <b>super-streamlined 'aeroshell'</b> to encapsulate the vehicle, doubling as the primary surface to which the solar cells are mounted to. However, this shell must be designed in way to obey the constraints of <b>Manufacturability, Interference, Ergonomics, and Regulatory Compliance.</b> There are <b>over 80+ System Requirements</b> for the aeroshell alone, with examples such as: </p>
+                <ul class="inline-list">
+                    <li><b>Draftability:</b> The upper and lower halves of the car must have a minimum 3° draft for composites fabrication.</li>
+                    <li><b>Unobstructed View:</b> a driver must have 100° of sight to either side of the car.</li>
+                    <li><b>Solar Collector Area:</b> Each car is allowed up to 4 square meters of solar cells.</li>
+                    <li><b>Front Daytime Running Lights:</b> Must be located at least 400mm apart, and no further back than 200mm from tip of the car.</li>
+                </ul>
+                <p>For the Aurora Project, I was <b>principaly responsible for the design and fabrication of the aeroshell</b>.</p>
+
+            </div>
+            <div class ="main-content">
+                <h2>AIRFOIL SELECTION</h2>
+                <p>Without having to run a complex 3D CFD simulations, the design of the aeroshell starts with a selection of a known airfoil shape. Common options include NACA6-Series, or by PARSEC parametrization. While in practice it's quite
+                     difficult to translate the observed flowfield in 2D to a 3D car (given the &lt0.5 aspect ratio), this gives me a starting point to further refine the design from.
+                </p>
+                <img class="project-content-image" style="padding-bottom: 1rem;" src="..\06-02-images\06-02-01-pictures\Screenshot 2025-11-25 173600.png">
+            </div>
+            <div class ="main-content">
+                <h2>CAD, SIM, VALIDATE, REPEAT</h2>
+                <p>Below are a few could-be designs of the aeroshell. Wireframe work folders were colour coded to quickly identify which group an element belonged.</p>
+                <div class="distributed-container">
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\wireframe.png">
+                        <p>Colour-coded wireframe. Helps with team wireframe visibility.</p>
+                    </div>
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\Screenshot 2025-11-22 114850.png">
+                        <p>'The Duck' was an early, unfortunate exploration of design.</p>
+                    </div>
+                </div>
+                <p>The team only had <b>2 months</b> to refine an aeroshell before manufacturing begins. Each iteration is simulated in CFD, studied, then iterated upon using the information available from simulation. I used <b>3DEXPERIENCE ENOVIA PRODUCT LIFECYCLE MANAGEMENT</b> to perform revision control on over 40+ iterations of the aeroshell design.</p>
+
+                <div class="distributed-container">
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-iterations-PLM.png">
+                    </div>
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-would-be-cfd.png">
+                    </div>
+                </div>
+
+                <p>I used tools like <b>Isophote Maps</b> help to spot surface imperfections, as creating smooth, continous surfaces is significant as to not increase the energy required for the air to move around the car. On the otherhand, <b>Draft Analysis</b> helps ensure the part can be removed from the fiberglass mold after laying up the composites.</p>
+                <div class="distributed-container">
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-would-be-iso-harsh.png">
+                        <p>Warped corners, <b>undulations along length of the floor.</b></p>
+                    </div>
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-would-be-iso-less-harsh.png">
+                        <p>Smoother tail, but the floor could be better.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>FROM DESIGN TO MANUFACTURING</h2>
+                <p>Below is the final aeroshell design. 40+ iterations, <b>hundreds of hours of CFD</b> and way too many energy drinks.</p>
+                <img class="project-content-image" src="..\06-02-images\06-02-01-pictures\aurora-pre-mfg.png">
+                <p>Before begining the physical fabrication of the car, practical elements to integrate the rest of the solar car's other features, such as the <b>solar array, wheels,</b> and <b>view window</b> must be modified into the design. I partitioned out features such as <b>indentations for the solar cells</b>, split lines for the upper/lower halves of the fiberglass molds, and <b>service doors for the wheels</b>. Because of the <a href="projects-systems-engineering.html" target="_blank">System Requirements</a> defined during the conceptual design process, the placement of these features were already well-defined / considered for in advance of this step.</p>
+                <p>The car's aeroshell is typically constructed of <b>Carbon Fiber Composites</b> and kevlar to keep the vehicle weight low as possible. This means to make this car <b>manufacturable</b>, I partiioned the surfaces of the aeroshell into 6 segments + view window. These surfaces will then be used to machine a positive plug before making a negative mold. Onwards to fabricating the car!</p>
+                <div class="distributed-container">
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-assembly.png">
+                        <p>Exploded view of the aeroshell mold surfaces.</p>
+                    </div>
+                    <div class="distributed-column">
+                        <img class="project-content-image" style="max-height: 300px;" src="..\06-02-images\06-02-01-pictures\aurora-mfg-body-screenshot.png">
+                        <p>Complete assembly of the aeroshell mold surfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "main-content">
+                <h2>SEE ALSO</h2>
+                <!--
+                <a class="link-black" href="projects-systems-engineering.html">
+                    <div class="foot-row">
+                        <h3>➤ SYSTEMS ENGINEERING</h3>
+                    </div>
+                </a>
+                -->
+                <a class="link-black" href="projects-aurora-mfg.html">
+                    <div class="foot-row">
+                        <h3>➤ MANUFACTURING & DFM</h3>
+                    </div>
+                </a>
+                <hr style="margin-top: 1.5rem;">
+                <p></p>
+                <p style="text-align: right;">KH</p>
+            </div>
+        </main>
+
+        <script>
+            const toggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            toggle.addEventListener('click', () => {menu.classList.toggle('show');});
+        </script>
+        <footer class="container">
+           <div class="foot-element">
+                 <div class="foot-row">
+                    <div class="foot-column foot-column-50">
+                        <h3></h3>
+                        <p>Hosted on GitHub</p>
+                    </div>
+                    <div class="foot-column foot-column-25">
+                        <h3><b>CONTACT</b></h3>
+                        <p><a href="mailto:kai.hashimoto1@outlook.com">Email</a></p>
+                        <p><a href="https://www.linkedin.com/in/kai-hashimoto/" target="_blank">LinkedIn</a></p>
+                    </div>
+                    <div class="foot-column foot-column-25">
+                        <h3><b>DISCOVER</b></h3>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="projects.html">Projects</a></p>
+                        <p><a href="resume.html">Resume</a></p>
+                        <p><a href="helper.html">Useful</a></p>
+                    </div>
+                </div> 
+            </div>  
+        </footer>
+    </body>
+</html>
